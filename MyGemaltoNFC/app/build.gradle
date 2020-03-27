@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.mygemaltonfc"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Multiple APKs based on ABI.
+    splits {
+        abi {
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // Clears the default list from all ABIs to no ABIs.
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a'
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //gemalto SDK
+    implementation(name:"HCEMobileWalletSDK-debug-5.1.12.rc01",ext:"aar")
+  //  implementation(name:"HCEMobileWalletSDK-release-5.1.11.rc01",ext:"aar")
+    implementation(name:"MobileGateway-hce-debug-4.2.0.rc01",ext:"aar")
+  //  implementation(name:"MobileGateway-hce-release-4.2.0.rc01",ext:"aar")
+
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //fcm
+    implementation "com.google.android.gms:play-services-base:11.8.0"
+    implementation ('com.google.firebase:firebase-messaging:11.8.0', {
+        exclude group: 'com.android.support', module: 'support-v4'
+    })
+
+
+    //sdk's dependencies
+    implementation 'com.madgag.spongycastle:pkix:1.54.0.0'
+    implementation 'net.java.dev.jna:jna:5.1.0'
+}

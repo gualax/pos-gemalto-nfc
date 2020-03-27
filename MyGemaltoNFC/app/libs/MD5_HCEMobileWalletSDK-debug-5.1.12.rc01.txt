@@ -1,0 +1,1 @@
+MD5 (HCEMobileWalletSDK-debug-5.1.12.rc01.aar) = 1e49d727c3725fa6d16f0e740e3968f7

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1084411920888",
+    "firebase_url": "https://mygemaltonfc.firebaseio.com",
+    "project_id": "mygemaltonfc",
+    "storage_bucket": "mygemaltonfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084411920888:android:ea7d7d29d46c29f374960d",
+        "android_client_info": {
+          "package_name": "com.example.mygemaltonfc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084411920888-cu7rfelaniegqa15oigtci5e8og6970e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4cVdcB3kDnueOFDK11glDt4cNkw1wGn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084411920888-cu7rfelaniegqa15oigtci5e8og6970e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

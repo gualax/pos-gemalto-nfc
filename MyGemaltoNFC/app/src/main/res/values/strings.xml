@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyGemaltoNFC</string>
+
+
+    <!--       HCE Service        -->
+    <string name="hce_service_description">MPay</string>
+    <string name="aid_description">>MPay Pay aid_description</string>
+
+    <!--       Add Card        -->
+    <string name="foreground_service_message">Application is running in foreground</string>
+    <string name="notification_service_channel">Foreground notification</string>
+    <string name="invalid_pan">Invalid Number less than 16 characters</string>
+    <string name="invalid_expiry">Invalid exp date</string>
+    <string name="invalid_cvv">invalid CVV</string>
+
+
+
+</resources>
