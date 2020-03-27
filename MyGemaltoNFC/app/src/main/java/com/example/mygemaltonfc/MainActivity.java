@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements MGDigitizationLis
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
     }
 
+
+
+    ///  Interface implementation /////
     @Override
     public void onCPSActivationCodeAcquired(String id, byte[] code) {
 //TODO: Trigger CPS Enrollment
